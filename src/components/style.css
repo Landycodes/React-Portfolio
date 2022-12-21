@@ -1,0 +1,36 @@
+
+:root {
+    --menu: #000000;
+    --bckrnd: #1A2238;
+    --footer: #1d2e53;
+    --brdr: #ff3c00;
+    --acnt: #F4DB7D;
+}
+html {
+    background-color: var(--bckrnd);
+}
+
+.navbg {
+    background-color: var(--menu);
+}
+.menu > li {
+    cursor: pointer;
+}
+.menu > li:hover {
+    text-shadow: whitesmoke 2px 1px 5px;
+}
+.active {
+    border-bottom: 2px solid var(--brdr);
+    text-shadow: var(--brdr) 2px 1px 5px;
+}
+.bgColor{
+    background-color: #1A2238;
+    color: whitesmoke;
+}
+
+.footer {
+    background-image: linear-gradient(var(--bckrnd), #ff3c004f 99%);
+    /* background-color: var(--footer); */
+}
+
+/* change at 615px for mobile */
