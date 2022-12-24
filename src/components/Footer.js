@@ -2,7 +2,6 @@ import React from "react";
 import "./style.css";
 
 const style = {
-  margin: {},
   pointer: {
     curser: "pointer",
     margin: "0px 20px 0px 20px",

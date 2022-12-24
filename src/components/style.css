@@ -8,6 +8,7 @@
 }
 html {
     background-color: var(--bckrnd);
+    overflow: hidden;
 }
 
 .navbg {
@@ -29,8 +30,22 @@ html {
 }
 
 .footer {
+    background-color: var(--bckrnd);
     background-image: linear-gradient(var(--bckrnd), #ff3c004f 99%);
-    /* background-color: var(--footer); */
 }
 
+.center {
+    height: 75vh;
+}
+
+.contentbg {
+    background-color:  rgba(0, 0, 0, 0.552);
+}
+
+.invalid {
+    border: 2px solid red;
+}
+.invalid::placeholder {
+    color: red;
+}
 /* change at 615px for mobile */

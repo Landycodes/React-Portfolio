@@ -25,6 +25,7 @@ export default function Content() {
 
   const changePage = (page) => setPage(page);
 
+  //returns header and page content
   return (
     <div>
       <Header currentPage={currentPage} changePage={changePage} />

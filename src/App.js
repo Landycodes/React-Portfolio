@@ -6,7 +6,7 @@ import Footer from "./components/Footer";
 const links = [
   {
     link: "https://github.com/Landycodes",
-    image: "./Github.png",
+    image: "./Assets/Github.png",
     label: "Github",
     size: {
       height: "40px",
@@ -19,7 +19,7 @@ const links = [
   },
   {
     link: "https://www.linkedin.com/in/andrew-landry-75a65b244/",
-    image: "./linkedIn.png",
+    image: "./Assets/linkedIn.png",
     label: "LinkedIn",
     size: {
       height: "45px",
@@ -31,7 +31,7 @@ const links = [
   },
   {
     link: "https://www.instagram.com/heeyyybuddy/",
-    image: "./insta.png",
+    image: "./Assets/insta.png",
     label: "Instagram",
     size: {
       height: "65px",
