@@ -5,6 +5,15 @@ import Contact from "./pages/Contact";
 import Portfolio from "./pages/Portfolio";
 import Resume from "./pages/Resume";
 
+const tiles = [
+  {
+    title: "Weather App",
+    img: "./assets/portfolio/weather.png",
+    app: "https://landycodes.github.io/Weather-Display/",
+    git: "https://github.com/Landycodes/Weather-Display",
+  },
+];
+
 export default function Content() {
   const [currentPage, setPage] = useState("AboutMe");
 

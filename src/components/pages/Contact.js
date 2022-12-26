@@ -56,7 +56,7 @@ export default function Contact() {
               "focusout",
               () => {
                 const RegEx =
-                  /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+                  /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
                 if (RegEx.test(email.value)) {
                   validateEmail(isValidEmail);
                 } else {

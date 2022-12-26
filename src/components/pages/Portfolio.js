@@ -10,67 +10,115 @@ const style = {
   },
 };
 
+const tiles = {
+  weather: {
+    id: "weather",
+    image: "./assets/portfolio/weather.png",
+    title: "Weather App",
+    app: "https://landycodes.github.io/Weather-Display/",
+    git: "https://github.com/Landycodes/Weather-Display",
+  },
+  drink: {
+    id: "drink",
+    image: "./assets/portfolio/drink.png",
+    title: "Drink",
+    app: "https://mrgreen12375.github.io/drink/",
+    git: "https://github.com/Landycodes/drink",
+  },
+  weblicater: {
+    id: "web",
+    image: "./assets/portfolio/weblicater.png",
+    title: "WEBlicater",
+    app: "https://weblicater.herokuapp.com/",
+    git: "https://github.com/Landycodes/WEBlicater",
+  },
+  passGen: {
+    id: "pass",
+    image: "./assets/portfolio/passgen.png",
+    title: "Password Generator",
+    app: "https://landycodes.github.io/Password-Generator/",
+    git: "https://github.com/Landycodes/Password-Generator",
+  },
+  planner: {
+    id: "plan",
+    image: "./assets/portfolio/planner.png",
+    title: "Day Planner",
+    app: "https://landycodes.github.io/Work-Day-Planner/",
+    git: "https://github.com/Landycodes/Work-Day-Planner",
+  },
+  jsQuiz: {
+    id: "quiz",
+    image: "./assets/portfolio/quiz.png",
+    title: "J.S Quiz",
+    app: "https://landycodes.github.io/JS-Trivia-Quiz/index.html",
+    git: "https://github.com/Landycodes/JS-Trivia-Quiz",
+  },
+};
+const { weather, drink, weblicater, passGen, planner, jsQuiz } = tiles;
+
 export default function Portfolio() {
+  //cover card when clicked
+  const Project = (tiles) => {
+    return (
+      // card container
+      <div
+        id={tiles.id}
+        className="pointer contentbg rounded overflow-hidden d-flex flex-column align-items-center shadow m-3"
+        onClick={(event) => {
+          event.stopPropagation();
+          const popup = document.getElementsByClassName(`${tiles.id}`);
+          for (let i = 0; i < popup.length; i++) {
+            popup[i].classList.remove("hideMe");
+          }
+          document
+            .getElementById(`${tiles.id}`)
+            .addEventListener("mouseleave", function () {
+              for (let i = 0; i < popup.length; i++) {
+                popup[i].classList.add("hideMe");
+              }
+            });
+        }}
+      >
+        {/* link popup */}
+        <div className={`cover d-flex flex-column hideMe ${tiles.id}`}>
+          <a
+            href={tiles.app}
+            className={`view text-white text-decoration-none text-center hideMe ${tiles.id}`}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <h3>view app 🚀</h3>
+          </a>
+          <hr className={`hr hideMe ${tiles.id}`} />
+          <a
+            href={tiles.git}
+            className={`view text-white text-decoration-none text-center hideMe ${tiles.id}`}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <h3>Github repo 📁</h3>
+          </a>
+        </div>
+        {/* card image and name */}
+        <img src={tiles.image} alt={tiles.title} style={style.resize} />
+        <h4 className="text-center m-0 p-1">{tiles.title}</h4>
+      </div>
+    );
+  };
+  // container for projects
   return (
     <div className="bgColor d-flex justify-content-center">
       <div
         className="d-flex justify-content-center flex-wrap mt-4"
         style={style.box}
       >
-        {/* Card 1 */}
-        <div className="contentbg rounded overflow-hidden shadow cursor-pointer m-3">
-          <img
-            src="./assets/portfolio/weather.png"
-            alt="weather app"
-            style={style.resize}
-          />
-          <h4 className="text-center m-0 p-1">Weather App</h4>
-        </div>
-        {/* Card 2 */}
-        <div className="contentbg rounded w-56 overflow-hidden shadow-lg cursor-pointer m-3">
-          <img
-            src="./assets/portfolio/drink.png"
-            alt="drink"
-            style={style.resize}
-          />
-          <h4 className="text-center m-0 p-1">Drink</h4>
-        </div>
-        {/* Card 3 */}
-        <div className="contentbg rounded w-56 overflow-hidden shadow-lg cursor-pointer m-3">
-          <img
-            src="./assets/portfolio/weblicater.png"
-            alt="weblicater"
-            style={style.resize}
-          />
-          <h4 className="text-center m-0 p-1">Weblicater</h4>
-        </div>
-        {/* Card 4 */}
-        <div className="contentbg rounded w-56 overflow-hidden shadow-lg cursor-pointer m-3">
-          <img
-            src="./assets/portfolio/passgen.png"
-            alt="password generator"
-            style={style.resize}
-          />
-          <h4 className="text-center m-0 p-1">Password Generator</h4>
-        </div>
-        {/* Card 5 */}
-        <div className="contentbg rounded w-56 overflow-hidden shadow-lg cursor-pointer m-3">
-          <img
-            src="./assets/portfolio/planner.png"
-            alt="day planner"
-            style={style.resize}
-          />
-          <h4 className="text-center m-0 p-1">Day Planner</h4>
-        </div>
-        {/* Card 6 */}
-        <div className="contentbg rounded w-56 overflow-hidden shadow-lg cursor-pointer m-3">
-          <img
-            src="./assets/portfolio/quiz.png"
-            alt="project1"
-            style={style.resize}
-          />
-          <h4 className="text-center m-0 p-1">J.S Quiz</h4>
-        </div>
+        {/* display cards */}
+        {Project(weather)}
+        {Project(drink)}
+        {Project(weblicater)}
+        {Project(passGen)}
+        {Project(planner)}
+        {Project(jsQuiz)}
       </div>
     </div>
   );

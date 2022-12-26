@@ -10,7 +10,7 @@ html {
     background-color: var(--bckrnd);
     overflow: hidden;
 }
-
+/* header */
 .navbg {
     background-color: var(--menu);
 }
@@ -28,12 +28,13 @@ html {
     background-color: #1A2238;
     color: whitesmoke;
 }
-
+/* footer */
 .footer {
     background-color: var(--bckrnd);
     background-image: linear-gradient(var(--bckrnd), #ff3c004f 99%);
 }
 
+/* center vertically */
 .center {
     height: 75vh;
 }
@@ -42,10 +43,50 @@ html {
     background-color:  rgba(0, 0, 0, 0.552);
 }
 
+/* when contact form is invalid */
 .invalid {
     border: 2px solid red;
 }
 .invalid::placeholder {
     color: red;
 }
+
+/* portfolio */
+.view {
+    padding: 5px;
+    height: 55px;
+    width: 250px;
+}
+.cover :first-child{
+    margin: 10px 0px -5px 0px ;
+}
+.view :hover {
+    border-radius: 5px;
+    background-color: #1d2e53;
+}
+.cover {
+    border-radius: 5px;
+    position: absolute;
+    height: 185px;
+    width: 250px;
+    background-color: #000000d0;
+}
+
+.hideMe {
+    display: none;
+    background-color: transparent;
+}
+
+.hr {
+    opacity: 1;
+    height: 5px;
+    width: 100%;
+    color: transparent;
+    background-color: #ffffff;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
 /* change at 615px for mobile */
