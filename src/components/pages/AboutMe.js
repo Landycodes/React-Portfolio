@@ -2,7 +2,7 @@ import React from "react";
 
 const style = {
   resize: {
-    height: "66vh",
+    height: "66vmin",
     width: "auto",
   },
 };
@@ -10,7 +10,7 @@ const style = {
 export default function AboutMe() {
   return (
     <div className="bgColor">
-      <div className="d-flex flex-row-reverse justify-content-center align-items-center p-3">
+      <div className="aboutme p-3">
         <p
           className="text-start contentbg p-2 w-50 rounded-end lh-base m-0"
           style={style.resize}

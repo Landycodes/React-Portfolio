@@ -10,13 +10,13 @@ const style = {
 export default function Header({ currentPage, changePage }) {
   return (
     <nav className="navbg d-flex justify-content-around align-items-center text-white text-nowrap">
-      <h2 className="m-2">Andrew Landry</h2>
+      <h2 className="name m-2">Andrew Landry</h2>
       <div></div>
       <ul
         className="menu list-unstyled d-flex justify-content-between m-0"
         style={style.w10}
       >
-        <li className="m-2">
+        <li className="navi m-2">
           <a
             href="#aboutme"
             onClick={() => changePage("AboutMe")}
@@ -27,7 +27,7 @@ export default function Header({ currentPage, changePage }) {
             About Me
           </a>
         </li>
-        <li className="m-2">
+        <li className="navi m-2">
           <a
             href="#Portfolio"
             onClick={() => changePage("Portfolio")}
@@ -38,7 +38,7 @@ export default function Header({ currentPage, changePage }) {
             Portfolio
           </a>
         </li>
-        <li className="m-2">
+        <li className="navi m-2">
           <a
             href="#Resume"
             onClick={() => changePage("Resume")}
@@ -49,7 +49,7 @@ export default function Header({ currentPage, changePage }) {
             Resume
           </a>
         </li>
-        <li className="m-2">
+        <li className="navi m-2">
           <a
             href="#Contact"
             onClick={() => changePage("Contact")}

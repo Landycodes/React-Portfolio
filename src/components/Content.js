@@ -27,7 +27,7 @@ export default function Content() {
 
   //returns header and page content
   return (
-    <div>
+    <div id="content-wrap">
       <Header currentPage={currentPage} changePage={changePage} />
       {renderPage()}
     </div>

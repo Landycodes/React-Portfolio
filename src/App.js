@@ -46,7 +46,7 @@ const links = [
 
 export default function App() {
   return (
-    <div>
+    <div id="page-container" className="bgColor">
       <Content />
       <Footer links={links} />
     </div>

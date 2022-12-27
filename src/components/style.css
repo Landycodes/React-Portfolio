@@ -14,8 +14,16 @@ form {
     width: 300px;
 }
 p {
-    font-size: 16px;
-    overflow-y: scroll;
+    font-size: 3.4vmin;
+    overflow-y: auto;
+}
+
+.name {
+    font-size: 6vmin;
+
+}
+.navi {
+    font-size: 3.2vmin;
 }
 ::-webkit-scrollbar {
     width: 3px;
@@ -45,10 +53,20 @@ p {
 }
 /* footer */
 .footer {
-    padding-top: 40px;
-    padding-bottom: 8px;
+    position: absolute;
+    width: 100vw;
+    height: 4rem;
+    bottom: 0;
     background-color: var(--bckrnd);
     background-image: linear-gradient(var(--bckrnd), #ff3c004f 99%);
+}
+/* assist footer to stay at bottom of page */
+#page-container {
+    position: relative;
+    min-height: 100vh;
+}
+#content-wrap {
+    padding-bottom: 7rem;
 }
 
 /* center vertically */
@@ -66,6 +84,13 @@ p {
 }
 .invalid::placeholder {
     color: red;
+}
+
+.aboutme {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
 }
 
 /* portfolio */
@@ -111,6 +136,16 @@ p {
 @media screen and (max-width: 610px) {
     .navbg {
         flex-direction: column;
+    }
+    .aboutme {
+        flex-direction: column-reverse;
+    }
+    p {
+        border-radius: 5px;
+    }
+    img {
+        border-radius: 5px;
+        margin-bottom: 15px;
     }
 
 }
