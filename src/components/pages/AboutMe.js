@@ -2,23 +2,19 @@ import React from "react";
 
 const style = {
   resize: {
-    height: "400px",
+    height: "66vh",
     width: "auto",
-  },
-  margin: {
-    marginRight: "10vw",
-    marginLeft: "10vw",
   },
 };
 
 export default function AboutMe() {
   return (
-    <div className="bgColor d-flex justify-content-center align-items-center center">
-      <div
-        className="d-flex flex-row-reverse justify-content-center"
-        style={style.margin}
-      >
-        <h5 className="text-start contentbg p-3 w-50 m-0 rounded-end shadow">
+    <div className="bgColor">
+      <div className="d-flex flex-row-reverse justify-content-center align-items-center p-3">
+        <p
+          className="text-start contentbg p-2 w-50 rounded-end lh-base m-0"
+          style={style.resize}
+        >
           Hello! My name is Andrew and I am an aspiring web developer located in
           Tucson, AZ. I started coding about 1 year ago through tutorial
           websites such as freecodecamp and TwilioQuest. I am also currently
@@ -30,7 +26,7 @@ export default function AboutMe() {
           the future! My hobbies and interests outside of computer programming
           are Skateboarding, fixing things like cars or smartphones, I also
           enjoy hiking and being active outside!
-        </h5>
+        </p>
         <img
           src="./Assets/profilePic.jpeg"
           alt="profile pic"

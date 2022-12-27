@@ -13,8 +13,8 @@ export default function Contact() {
   const [isValidMsg, validateMsg] = useState(true);
 
   return (
-    <div className="bgColor d-flex justify-content-center align-items-center center">
-      <form className="contentbg p-4 rounded d-flex flex-column shadow w-25">
+    <div className="bgColor d-flex justify-content-center align-items-center">
+      <form className="contentbg p-3 rounded d-flex flex-column shadow mt-4">
         <h3 className="text-center">Contact</h3>
         <label for="name">Name{isValidName ? "" : "*"}</label>
         <input
