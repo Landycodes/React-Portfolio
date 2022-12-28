@@ -20,6 +20,7 @@ export default function Footer({ links }) {
               target="_blank"
               className="text-decoration-none text-reset"
               style={style.pointer}
+              key={link.label}
             >
               <img src={link.image} alt={link.label} style={link.size} />
               <div style={link.text}>{link.label}</div>

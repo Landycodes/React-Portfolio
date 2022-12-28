@@ -16,7 +16,7 @@ export default function Contact() {
     <div className="bgColor d-flex justify-content-center align-items-center">
       <form className="contentbg p-3 rounded d-flex flex-column shadow mt-4">
         <h3 className="text-center">Contact</h3>
-        <label for="name">Name{isValidName ? "" : "*"}</label>
+        <label htmlFor="name">Name{isValidName ? "" : "*"}</label>
         <input
           type="text"
           id="name"
@@ -41,7 +41,7 @@ export default function Contact() {
             isValidName ? isValidName : validateName(!isValidName)
           }
         />
-        <label for="email">Email{isValidEmail ? "" : "*"}</label>
+        <label htmlFor="email">Email{isValidEmail ? "" : "*"}</label>
         <input
           type="email"
           id="email"
@@ -72,7 +72,7 @@ export default function Contact() {
             isValidEmail ? isValidEmail : validateEmail(!isValidEmail)
           }
         />
-        <label for="msg">Message{isValidMsg ? "" : "*"}</label>
+        <label htmlFor="msg">Message{isValidMsg ? "" : "*"}</label>
         <textarea
           id="msg"
           className={`rounded mb-3 ${isValidMsg ? "" : "invalid"}`}
