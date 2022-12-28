@@ -31,7 +31,7 @@ export default function Resume() {
             </ul>
           </div>
         </div>
-        <a href="./Assets/Resume/Resume.pdf" download>
+        <a href="./Resume/Resume.pdf" download>
           <button type="button" className="btn btn-secondary">
             Download Resume
           </button>
