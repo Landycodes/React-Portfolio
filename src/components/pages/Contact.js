@@ -14,7 +14,26 @@ export default function Contact() {
 
   return (
     <div className="bgColor d-flex justify-content-center align-items-center">
-      <form className="contentbg p-3 rounded d-flex flex-column shadow mt-4">
+      <form
+        action="https://formsubmit.co/089a72fd8d98739fcba73e8ee7c900f9"
+        method="POST"
+        className="contentbg p-3 rounded d-flex flex-column shadow mt-4"
+      >
+        {/* Value of this input will be the subject title i recieve */}
+        <input
+          type="hidden"
+          name="_subject"
+          value="Portfolio contact request"
+        ></input>
+        {/* Disable captcha */}
+        <input type="hidden" name="_captcha" value="false"></input>
+        {/* Return to home page */}
+        <input
+          type="hidden"
+          name="_next"
+          value="https://landycodes.github.io/React-Portfolio/"
+        ></input>
+        {/* contact form */}
         <h3 className="text-center">Contact</h3>
         <label htmlFor="name">Name{isValidName ? "" : "*"}</label>
         <input
@@ -22,6 +41,8 @@ export default function Contact() {
           id="name"
           className={`rounded mb-3 ${isValidName ? "" : "invalid"}`}
           placeholder={isValidName ? "Enter name" : "Name is required"}
+          name="Name"
+          required
           //once clicked, when clicked out of input field check if input is valid
           onClick={() => {
             const name = document.getElementById("name");
@@ -49,6 +70,8 @@ export default function Contact() {
           placeholder={
             isValidEmail ? "Enter email" : "A valid email is required"
           }
+          name="Email"
+          required
           //check email against regex to see if it is a valid email
           onClick={() => {
             const email = document.getElementById("email");
@@ -80,6 +103,8 @@ export default function Contact() {
           placeholder={
             isValidMsg ? "Type a message!" : "Please type a message >:("
           }
+          name="Message"
+          required
           //when input is out of focus check if it is valid
           onClick={() => {
             const msg = document.getElementById("msg");
@@ -106,4 +131,4 @@ export default function Contact() {
     </div>
   );
 }
-//needs to validate info when i click off form
+//Confirm form success to user

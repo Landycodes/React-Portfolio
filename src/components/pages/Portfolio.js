@@ -10,54 +10,53 @@ const style = {
   },
 };
 
-const tiles = {
-  weather: {
-    id: "weather",
-    image: "./Assets/Portfolio/weather.png",
-    title: "Weather App",
-    app: "https://landycodes.github.io/Weather-Display/",
-    git: "https://github.com/Landycodes/Weather-Display",
-  },
-  drink: {
-    id: "drink",
-    image: "./Assets/Portfolio/drink.png",
-    title: "Drink",
-    app: "https://mrgreen12375.github.io/drink/",
-    git: "https://github.com/Landycodes/drink",
-  },
-  weblicater: {
-    id: "web",
-    image: "./Assets/Portfolio/weblicater.png",
-    title: "WEBlicater",
-    app: "https://weblicater.herokuapp.com/",
-    git: "https://github.com/Landycodes/WEBlicater",
-  },
-  passGen: {
-    id: "pass",
-    image: "./Assets/Portfolio/passgen.png",
-    title: "Password Generator",
-    app: "https://landycodes.github.io/Password-Generator/",
-    git: "https://github.com/Landycodes/Password-Generator",
-  },
-  planner: {
-    id: "plan",
-    image: "./Assets/Portfolio/planner.png",
-    title: "Day Planner",
-    app: "https://landycodes.github.io/Work-Day-Planner/",
-    git: "https://github.com/Landycodes/Work-Day-Planner",
-  },
-  jsQuiz: {
-    id: "quiz",
-    image: "./Assets/Portfolio/quiz.png",
-    title: "J.S Quiz",
-    app: "https://landycodes.github.io/JS-Trivia-Quiz/index.html",
-    git: "https://github.com/Landycodes/JS-Trivia-Quiz",
-  },
-};
-const { weather, drink, weblicater, passGen, planner, jsQuiz } = tiles;
-
 export default function Portfolio() {
-  //cover card when clicked
+  //insert following object keys with project values to add new project
+  const tiles = [
+    {
+      id: "weather",
+      image: "./Assets/Portfolio/weather.png",
+      title: "Weather App",
+      app: "https://landycodes.github.io/Weather-Display/",
+      git: "https://github.com/Landycodes/Weather-Display",
+    },
+    {
+      id: "drink",
+      image: "./Assets/Portfolio/drink.png",
+      title: "Drink",
+      app: "https://mrgreen12375.github.io/drink/",
+      git: "https://github.com/Landycodes/drink",
+    },
+    {
+      id: "web",
+      image: "./Assets/Portfolio/weblicater.png",
+      title: "WEBlicater",
+      app: "https://weblicater.herokuapp.com/",
+      git: "https://github.com/Landycodes/WEBlicater",
+    },
+    {
+      id: "pass",
+      image: "./Assets/Portfolio/passgen.png",
+      title: "Password Generator",
+      app: "https://landycodes.github.io/Password-Generator/",
+      git: "https://github.com/Landycodes/Password-Generator",
+    },
+    {
+      id: "plan",
+      image: "./Assets/Portfolio/planner.png",
+      title: "Day Planner",
+      app: "https://landycodes.github.io/Work-Day-Planner/",
+      git: "https://github.com/Landycodes/Work-Day-Planner",
+    },
+    {
+      id: "quiz",
+      image: "./Assets/Portfolio/quiz.png",
+      title: "J.S Quiz",
+      app: "https://landycodes.github.io/JS-Trivia-Quiz/index.html",
+      git: "https://github.com/Landycodes/JS-Trivia-Quiz",
+    },
+  ];
+  //Project creates the card template
   const Project = (tiles) => {
     return (
       // card container
@@ -113,12 +112,7 @@ export default function Portfolio() {
         style={style.box}
       >
         {/* display cards */}
-        {Project(weather)}
-        {Project(drink)}
-        {Project(weblicater)}
-        {Project(passGen)}
-        {Project(planner)}
-        {Project(jsQuiz)}
+        {tiles.map((tile) => Project(tile))}
       </div>
     </div>
   );

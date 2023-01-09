@@ -8,7 +8,48 @@ const style = {
   },
 };
 
-export default function Footer({ links }) {
+export default function Footer() {
+  const links = [
+    {
+      link: "https://github.com/Landycodes",
+      image: "./Assets/Footer/Github.png",
+      label: "Github",
+      size: {
+        height: "40px",
+        width: "auto",
+        marginTop: "3px",
+      },
+      text: {
+        marginTop: "-2px",
+      },
+    },
+    {
+      link: "https://www.linkedin.com/in/andrew-landry-75a65b244/",
+      image: "./Assets/Footer/linkedIn.png",
+      label: "LinkedIn",
+      size: {
+        height: "45px",
+        width: "auto",
+      },
+      text: {
+        marginTop: "-5px",
+      },
+    },
+    {
+      link: "https://www.instagram.com/heeyyybuddy/",
+      image: "./Assets/Footer/insta.png",
+      label: "Instagram",
+      size: {
+        height: "65px",
+        width: "auto",
+        marginTop: "-10px",
+      },
+      text: {
+        marginTop: "-15px",
+      },
+    },
+  ];
+
   return (
     <div className="bgColor">
       <footer className="footer text-white-50">

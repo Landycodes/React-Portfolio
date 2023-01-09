@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Footer from "./Footer";
 import Header from "./Header";
 import AboutMe from "./pages/AboutMe";
 import Contact from "./pages/Contact";
@@ -30,6 +31,7 @@ export default function Content() {
     <div id="content-wrap">
       <Header currentPage={currentPage} changePage={changePage} />
       {renderPage()}
+      <Footer />
     </div>
   );
 }
