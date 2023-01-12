@@ -13,9 +13,11 @@ html {
 form {
     width: 300px;
 }
-p {
+.bio {
     font-size: 3.4vmin;
     overflow-y: auto;
+    height: 66vmin;
+    width: 50%;
 }
 
 .name {
@@ -141,12 +143,19 @@ p {
     .aboutme {
         flex-direction: column-reverse;
     }
-    p {
+    .bio {
         border-radius: 5px;
+        width: 90%;
     }
     img {
         border-radius: 5px;
         margin-bottom: 15px;
+    }
+    .footer {
+        height: 5rem;
+    }
+    .cover {
+        height: 200px;
     }
 
 }
