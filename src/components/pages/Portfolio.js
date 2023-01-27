@@ -55,6 +55,13 @@ export default function Portfolio() {
       app: "https://landycodes.github.io/JS-Trivia-Quiz/index.html",
       git: "https://github.com/Landycodes/JS-Trivia-Quiz",
     },
+    {
+      id: "appointme",
+      image: "./Assets/Portfolio/appointme.png",
+      title: "AppointMe",
+      app: "https://appoint-me.herokuapp.com/",
+      git: "https://github.com/mrgreen12375/appoint-me",
+    },
   ];
   //Project creates the card template
   const Project = (tiles) => {
