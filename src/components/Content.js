@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Footer from "./Footer";
 import Header from "./Header";
 import AboutMe from "./pages/AboutMe";
@@ -8,6 +8,13 @@ import Resume from "./pages/Resume";
 
 export default function Content() {
   const [currentPage, setPage] = useState("AboutMe");
+
+  //refresh to contact page if form has been submitted
+  useEffect(() => {
+    if (localStorage.getItem("thanks") === "giveThanks") {
+      setPage("Contact");
+    }
+  }, []);
 
   const renderPage = () => {
     if (currentPage === "AboutMe") {

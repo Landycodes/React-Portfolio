@@ -13,13 +13,13 @@ export default function Resume() {
               <li>CSS</li>
               <li>Javascript</li>
               <li>JQuery</li>
-              <li>Responsive Design</li>
+              <li>Responsive-Design</li>
               <li>React</li>
               <li>Bootstrap</li>
             </ul>
           </div>
           <div className="p-2 m-4">
-            <h4>Back-end</h4>
+            <h4>Back-End</h4>
             <ul>
               <li>API's</li>
               <li>Node.js</li>

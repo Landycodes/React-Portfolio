@@ -68,6 +68,7 @@ export default function Portfolio() {
     return (
       // card container
       <div
+        key={tiles.id}
         id={tiles.id}
         className="pointer contentbg rounded overflow-hidden d-flex flex-column align-items-center shadow m-3"
         onClick={(event) => {

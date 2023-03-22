@@ -14,7 +14,7 @@ form {
     width: 300px;
 }
 .bio {
-    font-size: 3.4vmin;
+    font-size: 4vmin;
     overflow-y: auto;
     height: 66vmin;
     width: 50%;
@@ -38,6 +38,10 @@ form {
 /* header */
 .navbg {
     background-color: var(--menu);
+}
+.menu {
+    display: flex;
+    justify-content: space-between;
 }
 .menu > li {
     cursor: pointer;
@@ -139,6 +143,9 @@ form {
 @media screen and (max-width: 610px) {
     .navbg {
         flex-direction: column;
+    }
+    .menu {
+        justify-content: center;
     }
     .aboutme {
         flex-direction: column-reverse;

@@ -12,10 +12,7 @@ export default function Header({ currentPage, changePage }) {
     <nav className="navbg d-flex justify-content-around align-items-center text-white text-nowrap">
       <h2 className="name m-2">Andrew Landry</h2>
       <div></div>
-      <ul
-        className="menu list-unstyled d-flex justify-content-between m-0"
-        style={style.w10}
-      >
+      <ul className="menu list-unstyled m-0" style={style.w10}>
         <li className="navi m-2">
           <a
             href="#aboutme"
