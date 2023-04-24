@@ -14,6 +14,13 @@ export default function Portfolio() {
   //insert following object keys with project values to add new project
   const tiles = [
     {
+      id: "carkeeper",
+      image: "./Assets/Portfolio/carkeeper.png",
+      title: "Car Keeper",
+      app: "https://car-keeper-2-0.vercel.app/",
+      git: "https://github.com/Landycodes/CarKeeper_2.0",
+    },
+    {
       id: "weather",
       image: "./Assets/Portfolio/weather.png",
       title: "Weather App",
@@ -35,25 +42,11 @@ export default function Portfolio() {
       git: "https://github.com/Landycodes/WEBlicater",
     },
     {
-      id: "pass",
-      image: "./Assets/Portfolio/passgen.png",
-      title: "Password Generator",
-      app: "https://landycodes.github.io/Password-Generator/",
-      git: "https://github.com/Landycodes/Password-Generator",
-    },
-    {
       id: "plan",
       image: "./Assets/Portfolio/planner.png",
       title: "Day Planner",
       app: "https://landycodes.github.io/Work-Day-Planner/",
       git: "https://github.com/Landycodes/Work-Day-Planner",
-    },
-    {
-      id: "quiz",
-      image: "./Assets/Portfolio/quiz.png",
-      title: "J.S Quiz",
-      app: "https://landycodes.github.io/JS-Trivia-Quiz/index.html",
-      git: "https://github.com/Landycodes/JS-Trivia-Quiz",
     },
     {
       id: "appointme",
