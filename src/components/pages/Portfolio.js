@@ -22,10 +22,10 @@ export default function Portfolio() {
     },
     {
       id: "weather",
-      image: "./Assets/Portfolio/weather.png",
-      title: "Weather App",
-      app: "https://landycodes.github.io/Weather-Display/",
-      git: "https://github.com/Landycodes/Weather-Display",
+      image: "./Assets/Portfolio/reiScrapper.png",
+      title: "REI Data Scrapper",
+      app: "https://rei-data-scrapper-server.vercel.app/",
+      git: "https://github.com/Landycodes/REI_Data_Scrapper",
     },
     {
       id: "drink",
