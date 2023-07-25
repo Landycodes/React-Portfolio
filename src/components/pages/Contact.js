@@ -12,13 +12,15 @@ export default function Contact() {
   const [isValidName, validateName] = useState(true);
   const [isValidEmail, validateEmail] = useState(true);
   const [isValidMsg, validateMsg] = useState(true);
-  const thanks = localStorage.getItem("thanks");
+  const [thanks, setThanks] = useState(false);
+  // const thanks = localStorage.getItem("thanks");
 
-  if (thanks === "hideThanks" || thanks === null) {
+  if (!thanks) {
     return (
       <div className="bgColor d-flex justify-content-center align-items-center">
         <form
-          onSubmit={() => {
+          onSubmit={(event) => {
+            event.preventDefault();
             const name = document.getElementById("name");
             const email = document.getElementById("email");
             const msg = document.getElementById("msg");
@@ -30,28 +32,36 @@ export default function Contact() {
               email.value !== "".trim() &&
               msg.value !== "".trim()
             ) {
-              localStorage.setItem("thanks", "giveThanks");
+              document
+                .querySelector("button[type=submit]")
+                .setAttribute("disabled", true);
+              fetch(
+                "https://formsubmit.co/ajax/089a72fd8d98739fcba73e8ee7c900f9",
+                {
+                  method: "POST",
+                  headers: {
+                    "Content-Type": "application/json",
+                    Accept: "application/json",
+                  },
+                  body: JSON.stringify({
+                    name: name.value,
+                    email: email.value,
+                    message: msg.value,
+                    _subject: "Portfolio contact request",
+                  }),
+                }
+              ).then(() => {
+                setThanks(true);
+                name.value = email.value = msg.value = "";
+                document
+                  .querySelector("button[type=submit]")
+                  .setAttribute("disabled", false);
+              });
             }
             return true;
           }}
-          action="https://formsubmit.co/089a72fd8d98739fcba73e8ee7c900f9"
-          method="POST"
           className="contentbg p-3 rounded d-flex flex-column shadow mt-4"
         >
-          {/* Value of this input will be the subject title i recieve */}
-          <input
-            type="hidden"
-            name="_subject"
-            value="Portfolio contact request"
-          ></input>
-          {/* Disable captcha */}
-          <input type="hidden" name="_captcha" value="false"></input>
-          {/* Return to contact page */}
-          <input
-            type="hidden"
-            name="_next"
-            value="https://landycodes.github.io/React-Portfolio/#Contact"
-          ></input>
           {/* contact form */}
           <h3 className="text-center">Contact</h3>
           <label htmlFor="name">Name{isValidName ? "" : "*"}</label>
@@ -149,7 +159,7 @@ export default function Contact() {
         </form>
       </div>
     );
-  } else if (thanks === "giveThanks") {
+  } else if (thanks) {
     return (
       <div className="container jumbotron mt-5">
         <h1 className="text-center">Thank You!</h1>
@@ -163,4 +173,3 @@ export default function Contact() {
     );
   }
 }
-//need to confirm form success to user
